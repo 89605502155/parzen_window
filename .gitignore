@@ -10,3 +10,13 @@
 CLAUDE.md
 /scripts
 /docs
+
+# build artifacts
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+
+# uv
+.venv/
