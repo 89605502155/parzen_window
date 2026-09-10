@@ -1,7 +1,7 @@
 [project]
 name = "parzen_window"
-version = "0.0.1"
-description = "A Python library for Parzen Window classification with gaussian, rectangle, triangle, epanechnikov and square kernels."
+version = "0.0.2"
+description = "Parzen window classification with incremental learning, memory-efficient compaction and adaptive bandwidth."
 readme = "README.md"
 license = { text = "MIT" }
 authors = [
@@ -41,4 +41,12 @@ packages = ["parzen_window"]
 [dependency-groups]
 dev = [
     "pytest",
+    "ruff>=0.16.6",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]

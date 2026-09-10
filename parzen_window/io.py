@@ -5,7 +5,9 @@ from __future__ import annotations
 import numpy as np
 
 
-def save_npz(path, *, h, kernel, adaptive_bandwidth, bandwidth_neighbors, X_train, y_train, classes) -> None:
+def save_npz(
+    path, *, h, kernel, adaptive_bandwidth, bandwidth_neighbors, X_train, y_train, classes
+) -> None:
     np.savez(
         path,
         h=np.asarray(h),

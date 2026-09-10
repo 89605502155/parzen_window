@@ -154,7 +154,9 @@ class ParzenWindowClassifier(BaseEstimator, ClassifierMixin):
 
     # -- memory management --------------------------------------------------------
 
-    def compact(self, reduction_fraction: float, n_neighbors: int = 5, min_per_class: int = 2) -> int:
+    def compact(
+        self, reduction_fraction: float, n_neighbors: int = 5, min_per_class: int = 2
+    ) -> int:
         """Drop training points that lie deep inside their own class's territory.
 
         Uses convex-neighborhood analysis (see :mod:`parzen_window.compaction`)
@@ -202,7 +204,7 @@ class ParzenWindowClassifier(BaseEstimator, ClassifierMixin):
         )
 
     @classmethod
-    def load(cls, path) -> "ParzenWindowClassifier":
+    def load(cls, path) -> ParzenWindowClassifier:
         """Load a model previously saved with :meth:`save`."""
         data = _io.load_npz(path)
         model = cls(

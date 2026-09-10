@@ -42,6 +42,4 @@ def resolve_kernel(name: str):
     try:
         return KERNELS[name]
     except KeyError as exc:
-        raise ValueError(
-            f"Unknown kernel {name!r}. Supported kernels: {sorted(KERNELS)}"
-        ) from exc
+        raise ValueError(f"Unknown kernel {name!r}. Supported kernels: {sorted(KERNELS)}") from exc
