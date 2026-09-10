@@ -1,0 +1,22 @@
+.idea
+.idea/
+.claude
+.claude/
+.vscode
+.vscode/
+/.idea
+/.claude
+/.vscode
+CLAUDE.md
+/scripts
+/docs
+
+# build artifacts
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+
+# uv
+.venv/
